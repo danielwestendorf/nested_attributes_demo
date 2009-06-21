@@ -1,0 +1,42 @@
+<% form_for @order do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </p>
+  <p>
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </p>
+  <p>
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip %>
+  </p>
+  <div id="delivery">
+  	  <% f.fields_for :deliveries do |delivery| %>
+		<div class="deliveries">
+			<p>
+				<%= delivery.label :delivery_date %><br />
+				<%= delivery.datetime_select :delivery_date, :include_blank => true %>
+			</p>
+			<p>
+				<%= delivery.label :quantity %><br />
+				<%= delivery.text_field :quantity %>
+			</p>
+		</div>
+	  <% end %>
+  </div>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

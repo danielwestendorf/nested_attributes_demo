@@ -1,0 +1,27 @@
+<% title "Orders" %>
+
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+  </tr>
+  <% for order in @orders %>
+    <tr>
+      <td><%=h order.first_name %></td>
+      <td><%=h order.last_name %></td>
+      <td><%=h order.address %></td>
+      <td><%=h order.city %></td>
+      <td><%=h order.state %></td>
+      <td><%=h order.zip %></td>
+      <td><%= link_to "Show", order %></td>
+      <td><%= link_to "Edit", edit_order_path(order) %></td>
+      <td><%= link_to "Destroy", order, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Order", new_order_path %></p>

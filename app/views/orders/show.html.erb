@@ -1,0 +1,32 @@
+<% title "Order" %>
+
+<p>
+  <strong>First Name:</strong>
+  <%=h @order.first_name %>
+</p>
+<p>
+  <strong>Last Name:</strong>
+  <%=h @order.last_name %>
+</p>
+<p>
+  <strong>Address:</strong>
+  <%=h @order.address %>
+</p>
+<p>
+  <strong>City:</strong>
+  <%=h @order.city %>
+</p>
+<p>
+  <strong>State:</strong>
+  <%=h @order.state %>
+</p>
+<p>
+  <strong>Zip:</strong>
+  <%=h @order.zip %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_order_path(@order) %> |
+  <%= link_to "Destroy", @order, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", orders_path %>
+</p>
