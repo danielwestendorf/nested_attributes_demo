@@ -388,3 +388,24 @@ Rendering template within layouts/application
 Rendering orders/new
 Rendered orders/_form (315.4ms)
 Completed in 329ms (View: 318, DB: 0) | 200 OK [http://localhost/orders/new]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-06-20 21:48:47) [GET]
+  [4;36;1mOrder Load (0.4ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2009-06-20 21:48:50) [GET]
+Rendering template within layouts/application
+Rendering orders/new
+Rendered orders/_form (274.5ms)
+Completed in 288ms (View: 277, DB: 0) | 200 OK [http://localhost/orders/new]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2009-06-20 21:49:15) [GET]
+Rendering template within layouts/application
+Rendering orders/new
+Rendered orders/_form (244.0ms)
+Completed in 258ms (View: 247, DB: 0) | 200 OK [http://localhost/orders/new]

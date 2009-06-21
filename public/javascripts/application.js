@@ -7,7 +7,7 @@ $(document).ready(function() {
 	$('.fieldWithErrors').parents(".deliveries").show();
 	//add a link to add deliveries
 	if ($('.deliveries:hidden').length > 0) {
-		$('#delivery').append('<a href="javascript: void(0)" id="addDelivery">Add Deliveries</a>');
+		$('#delivery').append('<a href="javascript: void(0)" id="addDelivery">Add Delivery</a>');
 	}
 	//start monitoring the link
 	$('#addDelivery').click(function() {
